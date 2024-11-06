@@ -17,22 +17,22 @@
 		<div class="row justify-content-center">
 
 
-			<div class="col col-11 col-sm-6 col-md-4 text-center foo">
+			<div class="col col-11 col-sm-6 col-md-4 text-center thumb">
 				<img src="img/thumb/berry1.jpg" alt="" data-img="berry1" class="figure-img img-fluid rounded ">
 			</div>
-			<div class="col col-11 col-sm-6 col-md-4 text-center foo">
+			<div class="col col-11 col-sm-6 col-md-4 text-center thumb">
 				<img src="img/thumb/opener1.jpg" alt="" data-img="opener1" class="figure-img img-fluid rounded ">
 			</div>
-			<div class="col col-11 col-sm-6 col-md-4 text-center foo">
+			<div class="col col-11 col-sm-6 col-md-4 text-center thumb">
 				<img src="img/thumb/peg1.jpg" alt="" data-img="peg1" class="figure-img img-fluid rounded ">
 			</div>
-			<div class="col col-11 col-sm-6 col-md-4 text-center foo">
+			<div class="col col-11 col-sm-6 col-md-4 text-center thumb">
 				<img src="img/thumb/peg2.jpg" alt="" data-img="peg2" class="figure-img img-fluid rounded ">
 			</div>
-			<div class="col col-11 col-sm-6 col-md-4 text-center foo">
+			<div class="col col-11 col-sm-6 col-md-4 text-center thumb">
 				<img src="img/thumb/peg3.jpg" alt="" data-img="peg3" class="figure-img img-fluid rounded ">
 			</div>
-			<div class="col col-11 col-sm-6 col-md-4 text-center foo">
+			<div class="col col-11 col-sm-6 col-md-4 text-center thumb">
 				<img src="img/thumb/peg4.jpg" alt="" data-img="peg4" class="figure-img img-fluid rounded ">
 			</div>
 			
@@ -48,7 +48,7 @@
 
 
 	<div id="pop" class="disappear">
-		<img id="mainImg" class="" src="img/large.png" alt="">
+		<img id="mainImg" class="img-fluid" src="img/large.png" alt="">
 	</div>
 <script src="js/pQuery.js"></script>
 	<script>
@@ -60,7 +60,7 @@ let pip = $("#pop");
 
 
 
-		function foo() {
+		function showImg() {
 
 			mainImg.setAttribute("src", "img/main/" + this.getAttribute("data-img") + ".jpg")
 			pip.fadeUp();
@@ -69,7 +69,7 @@ let pip = $("#pop");
 		}
 
 		thumbs.forEach(function (item, index, array) {
-			item.addEventListener("click", foo);
+			item.addEventListener("click", showImg);
 		});
 		pop.addEventListener("click", function (e) {
 pip.fade(50,false, function(){
